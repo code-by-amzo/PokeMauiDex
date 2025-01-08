@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PokeMauiDex.App.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="WidthRequest" Value="250"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="BorderColor" Value="DimGray"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Margin="10" BackgroundColor="Firebrick">
+            <Label TextColor="Aqua" FontSize="34" HorizontalOptions="Center">
+                Poke MAUI Dex
+            </Label>
+        
+            <Button Text="All Pokemons" WidthRequest="300" Padding="10"/>
+            
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Start" AlignItems="Start" HorizontalOptions="Center">
+                <Button Text="Gen I" Clicked="OnPokedexBtnClicked" CommandParameter="2"/>
+                <Button Text="Gen II" Clicked="OnPokedexBtnClicked" CommandParameter="2"/>
+                <Button Text="Gen III" Clicked="OnPokedexBtnClicked" CommandParameter="2"/>
+                <Button Text="Gen IV" Clicked="OnPokedexBtnClicked" CommandParameter="2"/>
+            </FlexLayout>
+        </VerticalStackLayout>
+
+</ContentPage>
