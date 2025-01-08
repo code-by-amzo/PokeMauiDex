@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:PokeMauiDex.App.ViewModels"
+             xmlns:models="clr-namespace:PokeMauiDex.App.Models"
+             x:DataType="viewModels:PokedexListViewModel"
+             x:Class="PokeMauiDex.App.Views.PokedexListPage"
+             Title="List of Pokedexes">
+    <CollectionView ItemsSource="{Binding PokedexList}"
+                    EmptyView="No items to display">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:PokedexListItem">
+                <Label Text="{Binding Name}" Padding="10" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

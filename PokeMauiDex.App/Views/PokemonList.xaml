@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:PokeMauiDex.App.Models"
+             x:Class="PokeMauiDex.App.Views.PokemonList">
+    <ListView ItemsSource="{Binding PokemonListItems}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell x:DataType="models:PokemonListItem">
+                    <HorizontalStackLayout>
+                        <Label Text="{Binding Index}"/>
+                        <Label Text="{Binding Name}"/>
+                    </HorizontalStackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentView>
