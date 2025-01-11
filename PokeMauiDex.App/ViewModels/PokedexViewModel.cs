@@ -1,13 +1,11 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using PokeMauiDex.App.Models;
-using PokeMauiDex.App.Services;
 
 namespace PokeMauiDex.App.ViewModels;
 
 public class PokedexViewModel : ObservableObject
 {
-	private readonly IPokedexService _pokedexService;
 	private int _selectedPokemonId;
 	private string _name;
 	
@@ -25,9 +23,8 @@ public class PokedexViewModel : ObservableObject
 	
 	public ObservableCollection<PokedexItem> PokedexItems { get; set; }
 
-	public PokedexViewModel(IPokedexService pokedexService)
+	public PokedexViewModel()
 	{        
-		_pokedexService = pokedexService;
 		PokedexItems = [];
 	}
 

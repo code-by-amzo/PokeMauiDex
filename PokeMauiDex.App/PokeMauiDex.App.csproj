@@ -74,4 +74,8 @@
         <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.7-prerelease.241119001" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Data\" />
+    </ItemGroup>
+
 </Project>
